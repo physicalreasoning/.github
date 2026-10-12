@@ -1,0 +1,26 @@
+# Lint and test a Python project managed with uv.
+# Based on physicalreasoning/forward's .github/workflows/ci.yml.
+# Expects a committed uv.lock, with ruff and pytest in the dev dependency group.
+name: ci
+
+on:
+  push:
+    branches: [$default-branch]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+      - run: uv sync --locked
+      - run: uv run ruff check .
+      - run: uv run ruff format --check .
+      - run: uv run pytest

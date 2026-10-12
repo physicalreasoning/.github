@@ -1,0 +1,47 @@
+name: Research proposal
+description: Propose an experiment, with its success criterion fixed before any results are seen.
+labels: ["research-proposal"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        We pre-register. Write down what would count as success or failure before running
+        anything, and keep the result whichever way it goes: negative results are published too.
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+      description: The one question this experiment answers, and why the answer matters.
+    validations:
+      required: true
+  - type: textarea
+    id: gate
+    attributes:
+      label: Pre-registered gate
+      description: |
+        The decision rule, fixed now: the metric, the baseline it must beat (for example copying
+        the last value, climatology, or the market price), the threshold, the evaluation window,
+        and what you will conclude if it passes and if it fails.
+    validations:
+      required: true
+  - type: textarea
+    id: data
+    attributes:
+      label: Data
+      description: |
+        Sources, date ranges, train/test split, and how leakage is ruled out. Note each source's
+        license or terms, and whether raw data can be published or only derived results.
+    validations:
+      required: true
+  - type: textarea
+    id: compute
+    attributes:
+      label: Compute
+      description: Estimated hardware, hours, and cost, and whether it fits on a laptop.
+    validations:
+      required: true
+  - type: textarea
+    id: prior
+    attributes:
+      label: Prior work and related results
+      description: Links to papers, findings in our repos, or earlier attempts.

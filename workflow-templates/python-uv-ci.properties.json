@@ -1,0 +1,7 @@
+{
+  "name": "Python CI (uv, ruff, pytest)",
+  "description": "Lint, format check, and tests for a Python project managed with uv. The Physical Reasoning default, based on forward's CI.",
+  "iconName": "octicon package",
+  "categories": ["Python"],
+  "filePatterns": ["uv\\.lock$", "pyproject\\.toml$"]
+}

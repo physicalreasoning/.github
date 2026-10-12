@@ -1,0 +1,43 @@
+name: Bug report
+description: Something is broken, wrong, or not reproducible.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report. If this is a security problem, do not file it here; see SECURITY.md.
+        If a published number does not reproduce, that counts as a bug: please include the command
+        and the number you got.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you saw, and what you expected instead.
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: The exact commands, inputs, or URL. A minimal example is best.
+      render: shell
+    validations:
+      required: true
+  - type: input
+    id: commit
+    attributes:
+      label: Commit or version
+      description: Output of `git rev-parse --short HEAD`, or the release/version you used.
+    validations:
+      required: true
+  - type: textarea
+    id: env
+    attributes:
+      label: Environment
+      description: OS, Python version, hardware (CPU, CUDA, MPS), and how you installed (uv, pip).
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or output
+      description: Paste the relevant output. Remove any tokens, keys, or private data first.
+      render: text
