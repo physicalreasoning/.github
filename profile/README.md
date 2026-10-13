@@ -15,6 +15,7 @@ with the code to reproduce it.
 | [isotherm](https://github.com/physicalreasoning/isotherm) | A calibrated decision model for Kalshi daily temperature ladders, evaluated walk-forward against the market's own price with sealed out-of-sample tests; live as a REST API and MCP server. |
 | [forward](https://github.com/physicalreasoning/forward) | Sealed forward tests for world models: every entry is frozen and hashed before a round opens and scored only on outcomes that resolve after the freeze. |
 | [causal-jepa](https://github.com/physicalreasoning/causal-jepa) | A negative result on joint-embedding predictive architectures for prediction-market strike ladders, with pre-registered gates and the diagnostics that failed to predict it. |
+| [WM-data-scrutiny](https://github.com/physicalreasoning/WM-data-scrutiny) | Coverage audit of 1,300 clips from 5 open-source manipulation datasets against 8 physical phenomena; identifies multi-object interaction, occlusion, and failure recovery as structural gaps in existing robot training data. | 
 | [web](https://github.com/physicalreasoning/web) | Source for [physicalreasoning.ai](https://physicalreasoning.ai). |
 
 ### Read more
